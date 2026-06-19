@@ -1,0 +1,28 @@
+body{
+    margin:0;
+    background:#f4f6f9;
+    font-family:Arial;
+}
+
+.sidebar{
+    width:250px;
+    height:100vh;
+    background:#1e293b;
+    position:fixed;
+}
+
+.content{
+    margin-left:250px;
+    padding:30px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+.table{
+    width:100%;
+}

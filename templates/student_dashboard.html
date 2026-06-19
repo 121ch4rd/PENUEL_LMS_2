@@ -1,0 +1,14 @@
+<h2>Student Name: {{ student.user.get_full_name }}  </h2> <br>
+<h2>Stuent Reg. No: {{ student.reg_no }} </h2> <br>
+<h4> Program: {{ student.program }} </h4> <br>
+<h4> The Year Of Study is: {{ student.year_of_study }} </h4> <br><br>
+
+{% for result in semester1_results %}
+...
+{% endfor %}
+
+Semester GPA:
+{{ semester1_gpa }}
+<br>
+Overall GPA:
+{{ overall_gpa }}

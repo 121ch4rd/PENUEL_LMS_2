@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>{{ student.name }}</h2>
+
+<p>Reg No: {{ student.reg_no }}</p>
+
+<p>Program: {{ student.program }}</p>
+
+<p>Year: {{ student.year_of_study }}</p>
+
+<hr>
+
+<h3>Semester 1</h3>
+
+<table border="1">
+
+<tr>
+<th>Subject</th>
+<th>Assignment</th>
+<th>Exam</th>
+<th>Total</th>
+<th>Grade</th>
+</tr>
+
+{% for result in semester1_results %}
+
+<tr>
+
+<td>{{ result.subject.name }}</td>
+
+<td>{{ result.assignment_mark }}</td>
+
+<td>{{ result.exam_mark }}</td>
+
+<td>{{ result.total_mark }}</td>
+
+<td>{{ result.grade }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+<h4>Semester GPA: {{ semester1_gpa }}</h4>
+
+<hr>
+
+<h3>Semester 2</h3>
+
+<table border="1">
+
+<tr>
+<th>Subject</th>
+<th>Assignment</th>
+<th>Exam</th>
+<th>Total</th>
+<th>Grade</th>
+</tr>
+
+{% for result in semester2_results %}
+
+<tr>
+
+<td>{{ result.subject.name }}</td>
+
+<td>{{ result.assignment_mark }}</td>
+
+<td>{{ result.exam_mark }}</td>
+
+<td>{{ result.total_mark }}</td>
+
+<td>{{ result.grade }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+<h4>Semester GPA: {{ semester2_gpa }}</h4>
+
+<hr>
+
+<h2>Overall GPA: {{ overall_gpa }}</h2>
+
+<a>
+href="{% url 'download_result_pdf' %}"
+class="btn btn-success">
+Download PDF
+</a>
+
+{% endblock %}
